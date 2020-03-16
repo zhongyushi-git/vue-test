@@ -3,12 +3,26 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = [
-  
+import login from '../views/login/Login'
+import home from '../views/home/Home'
+
+const routes = [{
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: login
+  },
+  {
+    path: '/home',
+    component: home
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 export default router
