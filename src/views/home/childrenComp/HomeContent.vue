@@ -12,6 +12,6 @@ export default {
 .content {
   height: 90vh;
   width: 85%;
-  background: red;
+  border-left:solid #FAF0E6 0.5px;
 }
 </style>

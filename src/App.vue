@@ -4,14 +4,15 @@
   </div>
 </template>
 <script>
-// import login from './views/login/login'
-// import home from './views/home/Home'
 export default {
   name:'App',
   components:{
   }
 }
 </script>
-<style>
-
+<style> 
+ #app{
+    height: 100%;
+  }
+  @import "assets/css/base.css"
 </style>
