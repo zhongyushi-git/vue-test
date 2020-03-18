@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import MenuNav from "components/common/menuNav/MenuNav";
+import MenuNav from "components/common/elementComponent/MenuNav";
 export default {
   name: "HomeNav",
   data() {
@@ -11,48 +11,30 @@ export default {
       menus: [
         {
           index: "1",
-          title: "导航1",
+          title: "用户管理",
           icon:"el-icon-location",
           children: [
             {
               index: "1-1",
-              title: "选项1"
+              title: "用户列表",
+              path:'/home/user/userList'
             },
-            {
-              index: "1-2",
-              title: "选项2"
-            }
           ]
         },
         {
           index: "2",
-          title: "导航2",
+          title: "系统管理",
           icon:"el-icon-menu",
           children: [
             {
               index: "2-1",
-              title: "选项1"
+              title: "登录日志",
+              path:'/home/system/loginLog'
             },
             {
               index: "2-2",
-              title: "选项2"
-            }
-          ]
-        }, {
-          index: "3",
-          title: "导航3",
-          icon:"el-icon-document",
-          children: [
-            {
-              index: "3-1",
-              title: "选项1"
-            },
-            {
-              index: "3-2",
-              title: "选项2"
-            }, {
-              index: "3-3",
-              title: "选项3"
+              title: "操作日志",
+              path:'/home/system/oprationLog'
             }
           ]
         }

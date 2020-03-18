@@ -78,6 +78,7 @@ export default {
           //验证成功
           this.loginMsg = "登录中...";
           this.isDisabled = true;
+          this.$message.error("用户名或密码错误");
         } else {
           //验证失败
           return false;
@@ -122,7 +123,11 @@ export default {
 .login-wrap .submit-btn {
   width: 100%;
 }
-
+.login-message {
+  margin-left: 80px;
+  font-size: 10px;
+  color: red;
+}
 /*修改系统样式 */
 .el-form-item__content {
   margin-left: 10px;

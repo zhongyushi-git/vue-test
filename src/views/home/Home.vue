@@ -20,6 +20,7 @@ export default {
     HomeContent
   }
 };
+//在组件渲染之前验证token。beforeCreate
 </script>
 
 <style scoped>

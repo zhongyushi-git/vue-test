@@ -1,17 +1,20 @@
 <template>
-  <div class="content">我是内容</div>
+  <div class="content">
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
-  name: "HomeCOntent"
+  name: "HomeContent"
 };
 </script>
 
 <style scoped>
 .content {
-  height: 90vh;
+  height: 87vh;
   width: 85%;
-  border-left:solid #FAF0E6 0.5px;
+  border-left: solid #faf0e6 0.5px;
+  padding: 10px;
 }
 </style>
