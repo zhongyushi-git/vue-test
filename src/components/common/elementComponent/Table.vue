@@ -13,11 +13,12 @@
   >
     <el-table-column v-if="tableObj.selection" type="selection" width="55"></el-table-column>
     <el-table-column
+    v-for="(item,index) in tableObj.tableTitle"
+      :key="index"
       :prop="item.prop"
       :label="item.label"
       :sortable="item.sortable"
-      v-for="(item,index) in tableObj.tableTitle"
-      :key="index"
+      :formatter="item.formatMethod"
     ></el-table-column>
   </el-table>
 </template>
@@ -52,7 +53,8 @@ export default {
           tableTitle: {
             prop: "",
             label: "",
-            sortable: false
+            sortable: false,
+            formatMethod:''
           }
         };
       }
@@ -62,8 +64,4 @@ export default {
 </script>
 
 <style scoped>
-/* .el-table {
-  margin-top: 10px;
-  margin-bottom: 10px;
-} */
 </style>

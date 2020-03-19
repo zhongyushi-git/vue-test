@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import breadcrumb from 'components/common/elementComponent/Breadcrumb'
+
 export default {
   name :'LoginLog',
   data(){
@@ -14,7 +14,6 @@ export default {
     }
   },
   components:{
-    breadcrumb
   }
 };
 </script>
