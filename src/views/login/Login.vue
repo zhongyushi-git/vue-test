@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import request from 'network/request'
 export default {
   name: "login",
   data() {
@@ -76,9 +77,14 @@ export default {
       this.$refs[formName].validate(valid => {
         if (valid) {
           //验证成功
-          this.loginMsg = "登录中...";
-          this.isDisabled = true;
-          this.$message.error("用户名或密码错误");
+          // this.loginMsg = "登录中...";
+          // this.isDisabled = true;
+          // this.$message.error("用户名或密码错误");
+          request.get('/training/manage/term/getTermList').then(res => {
+            console.log(res)
+          },err => {
+            console.log(err)
+          })
         } else {
           //验证失败
           return false;
@@ -95,7 +101,8 @@ export default {
         el.children[1].focus();
       }
     }
-  }
+  },
+ 
 };
 </script>
 

@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 //设置全局配置
-axios.defaults.baseURL = 'https://autumnfish.cn/api/'
+// axios.defaults.baseURL = 'https://autumnfish.cn/api/'
+axios.defaults.baseURL = 'http://localhost:8019'
+
 axios.defaults.timeout = 5000
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-rulencode'
 
